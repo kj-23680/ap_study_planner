@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AP Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>📚 AP Study Planner</h1>
+    <p>Smart schedules for multiple AP subjects</p>
+
+    <div class="container">
+
+        <h3>Select AP Subjects:</h3>
+        <label><input type="checkbox" value="1.4" data-name="AP Calculus BC"> AP Calculus BC</label><br>
+        <label><input type="checkbox" value="1.3" data-name="AP Calculus AB"> AP Calculus AB</label><br>
+        <label><input type="checkbox" value="1.2" data-name="AP Physics C"> AP Physics C</label><br>
+        <label><input type="checkbox" value="1.2" data-name="AP Chemistry"> AP Chemistry</label><br>
+        <label><input type="checkbox" value="1.1" data-name="AP Biology"> AP Biology</label><br>
+        <label><input type="checkbox" value="1.0" data-name="AP Computer Science A"> AP CSA</label><br>
+        <label><input type="checkbox" value="0.9" data-name="AP Computer Science Principles"> AP CSP</label><br>
+        <label><input type="checkbox" value="1.0" data-name="AP Statistics"> AP Stats</label><br>
+        <label><input type="checkbox" value="1.0" data-name="AP Macroeconomics"> AP Macro</label><br>
+
+        <br>
+
+        <label>Exam Date:</label>
+        <input type="date" id="examDate">
+
+        <label>Base Hours per day:</label>
+        <input type="number" id="hours" placeholder="e.g. 2">
+
+        <button onclick="generatePlan()">Generate Plan</button>
+
+    </div>
+
+    <h2>Your Plan:</h2>
+    <ul id="plan"></ul>
+
+    <h2>Progress</h2>
+    <input type="range" id="progress" min="0" max="100" value="0" onchange="updateProgress()">
+    <p id="progressText">0% complete</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
